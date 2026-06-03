@@ -192,7 +192,7 @@ if (session.startsWith("adm_sess")) {
 
         <p>Welcome administrator.</p>
 
-		<!--SCENARIO75{xss-payload})-->
+		<!--SCENARIO75{xss-payload}-->
         <div class="xss-payload">
             ${feedback}
         </div>
