@@ -289,7 +289,9 @@ Blocked payload:
   
 Flag:
 SCENARIO75{<script>}
+
 ________________________________________
+  
 Step 4: Verify MFA Endpoint Usage
   
 Search for references to:
@@ -309,7 +311,9 @@ Flag:
 SCENARIO75{No}
   
 This indicates MFA was bypassed rather than completed.
+  
 ________________________________________
+  
 Phase 3: Incident Response
   
 Step 1: Analyze the Encoded Header
@@ -334,7 +338,9 @@ Base64
   
 Flag:
 SCENARIO75{Base64}
+  
 ________________________________________
+  
 Step 2: Identify Critical Security Events
   
 Review:
@@ -350,7 +356,9 @@ SCENARIO75{CRITICAL}
 Interpretation:
 
 A previously issued administrative session cookie was reused by another client.
+  
 ________________________________________
+  
 Step 3: Locate Authentication Bypass Evidence
   
 Observe:
@@ -370,7 +378,9 @@ Flag:
 SCENARIO75{Authentication bypass anomaly}
   
 This confirms that an authentication workflow was circumvented.
+  
 ________________________________________
+  
 Step 4: Decode the Header Value
   
 Decode:
