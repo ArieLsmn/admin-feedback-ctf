@@ -284,13 +284,15 @@ Timestamp:
 Flag:
 SCENARIO75{18:50:15}
 
-Blocked payload:
-<script>
-  
-Flag:
-SCENARIO75{<script>}
+Blocked payload: <script>
+
+
+Flag: SCENARIO75{<script>}
+
 
 ________________________________________
+
+
   
 Step 4: Verify MFA Endpoint Usage
   
@@ -321,20 +323,7 @@ Step 1: Analyze the Encoded Header
 Investigate:
 UEhBTlRPTUdSSUR7QkxVRV9MMGdfSHVudDNyX000c3Qzcn0
   
-The character set:
-
-A-Z
-  
-a-z
-  
-0-9
-  
-+
-  
-/
-  
-is characteristic of:
-Base64
+The character set is characteristic of Base64
   
 Flag:
 SCENARIO75{Base64}
