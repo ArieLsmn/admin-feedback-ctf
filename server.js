@@ -151,7 +151,7 @@ app.post("/api/collect", (req, res) => {
     });
 });
 
-app.get("/adminlogs", (req, res) => {
+app.get("/analytics", (req, res) => {
 	
 
     let html = `
