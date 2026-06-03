@@ -1,41 +1,50 @@
 Environment
+
 DNS name: feedback.admin.local
-Application Port: 3075/tcp
-SSH Port: 2275/tcp
+
+Application Port: 3075
+
+SSH Port: 2275
+
 Blue Team SSH Credentials:
 -	Username: analyst
 -	Password: blue_team_rocks
 ________________________________________
 Deployment (Proxmox)
+
 Step 1
+
 Create a Linux VM.
+
 Recommended:
-•	Debian 12
-•	2 GB RAM
-•	2 vCPU
-•	20 GB Disk
+- Debian 12
+- 2 GB RAM
+- 2 vCPU
+- 20 GB Disk
 ________________________________________
 Step 2
+
 Copy the project to the VM.
-Example:
-git clone 
-or
-scp -P 2275 scenario75.zip analyst@:/home/analyst
 ________________________________________
 Step 3
+
 Run provisioning.
+
 sudo bash setup-vm.sh
 ________________________________________
 Step 4
+
 Start the lab.
+
 docker compose up -d –build
 ________________________________________
 Step 5
+
 Verify.
-Open:
-http://:3075
-SSH:
-ssh analyst@ -p 2275
+
+Open: http://:3075
+
+SSH: ssh analyst@ -p 2275
 ________________________________________
 Red Team Walkthrough Summary
 1.	Visit homepage.
@@ -54,9 +63,13 @@ Red Team Walkthrough Summary
 SCENARIO75{RED_C00k13_MFA_Byp4ss_0wn3d}
 ________________________________________
 Blue Team Walkthrough Summary
+
 Logs:
+
 opt/admin/logs/access.log
+
 opt/admin/logs/error.log
+
 Tasks:
 1.	Identify attacker IP.
 2.	Identify User-Agent.
@@ -66,6 +79,8 @@ Tasks:
 6.	Analyze encoded X-Forwarded-For value.
 7.	Identify cookie reuse event.
 8.	Review authentication bypass anomaly.
+
 Final Blue Team Flag:
+
 SCENARIO75{BLUE_L0G_HUnt3r_M4st3r}
 
