@@ -71,32 +71,17 @@ app.post("/feedback", (req, res) => {
 });
 
 
-//SCENARIO75{/api/verify-mfa}
-
 app.get("/api/verify-mfa", (req, res) => {
 
 res.json({
     endpoint: "/api/verify-mfa",
-    status: "MFA required",
-    next: "/dashboard"
 });
 
 });
 
 app.post("/api/verify-mfa", (req, res) => {
 
-//SCENARIO75{adm_sess}
-
-res.cookie(
-    "adm_sess_cookie",
-    "adm_sess_super_admin",
-    {
-        httpOnly: false
-    }
-);
-
 res.json({
-    success: true,
     redirect: "/dashboard"
 });
 
@@ -214,9 +199,6 @@ res.status(401).send(`
         MFA verification required.
     </p>
 
-    <p>
-        Visit /api/verify-mfa first.
-    </p>
 `);
 
 });
