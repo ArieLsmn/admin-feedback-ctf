@@ -1,0 +1,14 @@
+{
+"name": "admin-feedback-ctf",
+"version": "1.0.0",
+"description": "Scenario75 Admin Feedback CTF",
+"main": "server.js",
+"scripts": {
+	"prestart": "node logger.js",
+	"start": "node server.js"
+	},
+"dependencies": {
+"cookie-parser": "^1.4.7",
+"express": "^5.1.0"
+	}
+}

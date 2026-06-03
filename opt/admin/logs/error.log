@@ -1,0 +1,3 @@
+[18:50:15] WAF: blocked payload containing <script> from 10.10.14.50
+[18:51:58] CRITICAL: Cookie reuse detected from 10.10.14.50 using adm_sess_cookie
+[18:53:10] WARNING: Authentication bypass anomaly

@@ -1,0 +1,14 @@
+services:
+scenario75:
+build: .
+container_name: scenario75
+restart: unless-stopped
+
+ports:
+  - "3075:3075"
+
+volumes:
+  - ./opt/admin/logs:/app/opt/admin/logs
+
+environment:
+  - NODE_ENV=production
